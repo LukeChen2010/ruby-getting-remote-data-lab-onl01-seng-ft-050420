@@ -3,9 +3,13 @@ require 'open-uri'
 require 'json'
 
 class GetRequester
-    def get_requester(url)
-      uri = URI.parse(url)
-      response = Net::HTTP.get_response(uri)
-      response.body
+  
+    def initialize(url)
+      @url = url
+    end
+    
+    def get_requester()
+      @uri = URI.parse(@url)
+      response = Net::HTTP.get_response(@uri)
     end
 end
