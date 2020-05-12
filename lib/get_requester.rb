@@ -15,5 +15,6 @@ class GetRequester
     end
     
     def parse_josn
+      return JSON.parse(get_response_body)
     end
 end
